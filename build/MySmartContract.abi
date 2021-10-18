@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"str","type":"string"}],"name":"Greet","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"pure","type":"function"},{"inputs":[],"name":"Hello","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"pure","type":"function"}]
