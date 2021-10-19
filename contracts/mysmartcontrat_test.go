@@ -34,6 +34,8 @@ func (s *HelloworldTestSuite) SetupTest() {
 	}
 	// dd := big.NewInt(67)
 	s.auth, err = bind.NewKeyedTransactorWithChainID(key, big.NewInt(997))
+	// s.auth.Signer
+	// log.Println("printing auth", s.auth.Signer.)
 
 	if err != nil {
 		log.Println("error generating authentications transaction options")
@@ -45,7 +47,7 @@ func (s *HelloworldTestSuite) SetupTest() {
 	}
 
 	s.auth.GasFeeCap = big.NewInt(1000000000000000)
-
+	// s.auth.GasFeeCap = big.NewInt(10000)
 	s.sim = backends.NewSimulatedBackend(s.gAlloc, uint64(8750000000000000000))
 
 	_, _, hw, e := api.DeployApi(s.auth, s.sim)

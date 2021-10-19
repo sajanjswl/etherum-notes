@@ -1,5 +1,6 @@
 solc --optimize --abi ./contracts/MySmartContract.sol -o build
+sleep 2s
 
 solc --optimize --bin ./contracts/MySmartContract.sol -o build
-
+sleep 2s
 abigen --abi=./build/MySmartContract.abi --bin=./build/MySmartContract.bin --pkg=api --out=./api/MySmartContract.go
